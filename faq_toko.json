@@ -1,0 +1,55 @@
+{
+  "faq": [
+    {
+      "tag": "cara_order",
+      "keywords": [
+        "cara order",
+        "cara pesan",
+        "pesan lewat apa",
+        "order lewat apa",
+        "beli lewat mana",
+        "cara beli di toko grosir cahya"
+      ],
+      "answer": "Kamu bisa order di Toko Grosir cahyaa melalui:\n• Tokopedia\n• Shopee\n• WhatsApp: 083161356733\n• Datang langsung ke toko kami di Danawarih."
+    },
+{
+      "tag": "jam_operasional",
+      "keywords": [
+        "jam buka",
+        "jam operasional",
+        "buka jam berapa",
+        "tutup jam berapa",
+        "jam kerja toko"
+      ],
+      "answer": "Toko Grosir cahya buka setiap hari dari jam 08.00 sampai jam 21.00 WIB."
+    },
+    {
+      "tag": "produk",
+      "keywords": [
+        "jual apa saja",
+        "produk yang dijual",
+        "ada beras",
+        "jual sembako",
+        "peralatan rumah",
+        "peralatan dapur"
+      ],
+      "answer": "Kami menyediakan sembako, beras, minyak, perlengkapan rumah, dan peralatan dapur."
+    },
+    {
+      "tag": "alamat",
+      "keywords": [
+        "alamat toko",
+        "lokasi toko",
+        "alamat toko grosir cahya"
+      ],
+      "answer": "Toko Grosir cahya berlokasi di bulakwaru, Kabupaten Tegal, Jawa Tengah."
+    }
+  ],
+  "bad_words": [
+    "anjing",
+    "bangsat",
+    "tai",
+    "admin anjing",
+    "dasar lu bangsat"
+  ]
+}
