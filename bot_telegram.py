@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
@@ -11,27 +12,28 @@ from telegram.ext import (
 # 🔗 Ambil logika chatbot dari core.py
 from core import get_bot_reply
 
-# 🔑 Ganti dengan TOKEN dari BotFather
-TOKEN = "8482121566:AAFVdXo7KwZ977cCx-nEU3dbxTY7zBSEz40"
+# 🔑 Ambil TOKEN dari environment variable
+TOKEN = os.getenv("BOT_TOKEN")
+
+if not TOKEN:
+    raise ValueError("BOT_TOKEN belum diset di environment variable")
 
 # Command /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "Halo 👋\n"
-        "Saya bot grosir cahya .\n\n"
+        "Saya bot grosir cahya.\n\n"
         "Silakan tanya seputar:\n"
-        "- Jam bukan dan jam tutup\n"
+        "- Jam buka dan jam tutup\n"
         "- Lokasi toko\n"
-        "- barang yang tersedia\n"
+        "- Barang yang tersedia\n"
     )
-
 
 # Menangani semua pesan teks
 async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_text = update.message.text
-    jawaban = get_bot_reply(user_text)  # 🔥 HUBUNG KE core.py
+    jawaban = get_bot_reply(user_text)
     await update.message.reply_text(jawaban)
-
 
 def main():
     app = ApplicationBuilder().token(TOKEN).build()
@@ -41,7 +43,6 @@ def main():
 
     print("Bot Telegram grosir cahya sedang berjalan...")
     app.run_polling()
-
 
 if __name__ == "__main__":
     main()
